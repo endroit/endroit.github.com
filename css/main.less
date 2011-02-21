@@ -1,8 +1,90 @@
-@base-color: #eee;
+@col1: black;
+@col2: beige;
+@col3: purple;
+@col4: #800080 * .5;
+@col5: cadetblue;
 
-body { background-color: #000; color: @base-color; }
-h1, h2 { margin: 10px 0; font-weight: normal; }
-h1 { font-family: "IM Fell DW Pica"; font-size: 68px; text-align: center; }
-h2 { font-family: "IM Fell DW Pica"; font-size: 32px; text-align: center; color: @base-color * .5; }
+@fon1: "Geo";
+@fon2: "Meddon";
+/*@fon3: "Coda";*/
+@fon4: "Vollkorn";
 
-#content { margin-top: 10%; }
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: @col2;
+}
+
+h1 {
+  width: 600px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: @fon1;
+  font-weight: normal;
+  font-size: 48px;
+  position: relative;
+  top: -12px;
+  overflow: hidden;
+  color: @col3;
+}
+
+p { font-family: @fon4; font-size: 16px; margin: 8px 16px; }
+
+a { color: @col2; text-decoration: none; }
+
+#header .brand {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-family: @fon1;
+  font-size: 128px;
+  color: @col3;
+}
+
+#header .brand:first-letter {
+  font-size: 153px;
+  color: @col2;
+  background-color: @col3;
+  line-height: 142px;
+  width: 600px;
+  float: left;
+  text-align: right;
+} 
+
+#content {
+  width: 600px;
+}
+
+#agenda ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#agenda li {
+  font-family: @fon1;
+  display: block;
+  text-align: right;
+}
+
+#agenda li span {
+  font-size: 24px;
+  color: @col5;
+}
+
+#agenda li a:hover {
+  background-color: @col4;
+}
+
+#agenda li a {
+  border-top: 1px dotted @col4;
+  border-bottom: 1px dotted @col4;
+  font-size: 64px;
+  display: block;
+  text-align: center;
+  color: @col5;
+}
+
+.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
